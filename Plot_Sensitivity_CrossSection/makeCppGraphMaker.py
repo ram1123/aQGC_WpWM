@@ -26,6 +26,9 @@ print ''
 
 print 'void %s(){'%OutPutCodeName
 print '\tifstream in;'
+if iffit == 1:
+    print '\tofstream outfile;'
+    print '\toutfile.open ("%s.txt");'%(OutPutCodeName)
 print ''
 print '\t// Set TDR Style'
 print '\tsetTDRStyle();'
@@ -73,7 +76,7 @@ for f in range(0,len(InputData)):
 	print '\t\t'
 	print '\t\tstringstream(line) >>',' >> '.join(VarInTextFile),';'
 	print '\t\t'
-	print '\t\tcout<<"===> "<<',' <<"\\t" <<  '.join(VarInTextFile),'<<endl;'
+	print '\t\t//cout<<"===> "<<',' <<"\\t" <<  '.join(VarInTextFile),'<<endl;'
 	print ''
 	#print '\t\tif(%s < 11.0){'%VarInTextFile[1]
 	for var in range(0,len(VarInTextFile)):
@@ -148,7 +151,13 @@ for f in range(0,len(InputData)):
 		else:
 		    print '\tgr%i->Fit("%s","","",%f,%f);'%(f,fitfunction,fitXrange[0],fitXrange[1])
 		print '\tgr%i->GetFunction("%s")->SetLineColor(%s);'%(f,fitfunction,ColorChoice[f])
+		print '\n'
+		print '\tTF1 *fit%i = gr%i->GetFunction("%s");'%(f,f,fitfunction)
+		#print '\tcout<<"Fit value at 0 = "<<fit%i->Eval(-3.0)<<"\t"<<fit%i->Eval(3.0)<<endl;'%(f,f)
+		print '\tcout<<"aqgc_limits_For %s:  "<<fit%i->GetX(3,fit%i->GetXmin(),0.0)<<"\t"<<fit%i->GetX(3,0.0,fit%i->GetXmax())<<endl;'%(legends[f],f,f,f,f)
+		print '\toutfile<<"aqgc_limits_For %s  "<<fit%i->GetX(3,fit%i->GetXmin(),0.0)<<"\t"<<fit%i->GetX(3,0.0,fit%i->GetXmax())<<endl;'%(legends[f],f,f,f,f)
 	print '\n'
+	
 	print '\tc1->SetName("%s");'%legends[f]
         print '\tc1->Write();'
         print '\tc1->SaveAs("%s_%s.pdf");'%(OutPutCodeName,legends[f])
@@ -224,6 +233,8 @@ print '\tc1->Write();'
 print '\tc1->SaveAs("%s.pdf");'%OutPutCodeName
 print '\tc1->SaveAs("%s.png");'%OutPutCodeName
 print '\tf->Write();'
+if iffit == 1:
+    print '\toutfile.close();'
 
 print '}'
 

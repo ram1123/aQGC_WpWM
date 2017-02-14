@@ -1,0 +1,9 @@
+cat FM0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FM0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FM1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FM1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FM6_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FM6_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FM7_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FM7_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FS0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FS0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FS1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FS1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FT0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FT0_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FT1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FT1_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat
+cat FT2_par_12Feb_Range_FT0_12p5em12_WPlepWMhad.dat | awk '{print $1,"\t",($2*20250)/(sqrt(($2+0.514857936407+133008.2534)*20250)),"\t",0.0}' > FT2_par_12Feb_Range_FT0_12p5em12_WPlepWMhad_Sensitivity.dat

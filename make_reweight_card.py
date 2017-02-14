@@ -38,27 +38,27 @@ print ""
 #FS0
 # Some problem with FS0 and FS1 parameter; Cross-section remains flat with parameter.
 count=0
-for i in range(-900,901):
+for i in range(-1140,1141):
     if i%20 == 0:
 	test = str(round((i*1.0),4))
 	test = test.replace("-","m")
 	test = test.replace(".","p")
      	print "#************	FS0	***************************"
      	print "launch --rwgt_name=FS0_"+test
-     	print "        set anoinputs 12 0.000000e+00"
+     	print "        set anoinputs 11 0.000000e+00"
      	print "        set anoinputs 1 " +str((i*1.0)) + "00000e-12"
      	print ""
      	print ""
 
 ##FS1
-for i in range(-330,331):
+for i in range(-470,471):
     if i%10 == 0:
 	test = str(round((i*1.0),4))
      	test = test.replace("-","m")
      	test = test.replace(".","p")
      	print "#************	FS1	***************************"
      	print "launch --rwgt_name=FS1_"+test
-     	print "        set anoinputs 12 0.000000e+00"
+     	print "        set anoinputs 11 0.000000e+00"
      	print "        set anoinputs 2 " +str((i*1.0)) + "00000e-12"
      	print ""
      	print ""
@@ -71,7 +71,7 @@ for i in range(-42,43):
      test = test.replace(".","p")
      print "#************	FM0	***************************"
      print "launch --rwgt_name=FM0_"+test
-     print "        set anoinputs 12 0.000000e+00"
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 3 " +str((i*1.0)) + "00000e-12"
      print ""
      print ""
@@ -84,7 +84,7 @@ for i in range(-165,166):
      test = test.replace(".","p")
      print "#************	FM1	***************************"
      print "launch --rwgt_name=FM1_"+test
-     print "        set anoinputs 12 0.000000e+00"
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 4 " +str((i*1.0)) + "00000e-12"
      print ""
      print ""
@@ -97,7 +97,7 @@ for i in range(-84,84):
      test = test.replace(".","p")
      print "#************	FM6	***************************"
      print "launch --rwgt_name=FM6_"+test
-     print "        set anoinputs 12 0.000000e+00"
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 9 " +str((i*1.0)) + "00000e-12"
      print ""
      print ""
@@ -110,7 +110,7 @@ for i in range(-300,301):
      test = test.replace(".","p")
      print "#************	FM7	***************************"
      print "launch --rwgt_name=FM7_"+test
-     print "        set anoinputs 12 0.000000e+00"
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 10 " +str((i*1.0)) + "00000e-12"     
      print ""
      print ""
@@ -124,7 +124,6 @@ for i in range(-34,35):
      test = test.replace(".","p")
      print "#************	FT0	***************************"
      print "launch --rwgt_name=FT0_"+test
-     print "        set anoinputs 12 0.000000e+00"
      print "        set anoinputs 11 " +str((i*0.2)) + "00000e-12"
      print ""
      print ""
@@ -138,6 +137,7 @@ for i in range(-25,26):
      test = test.replace(".","p")
      print "#************	FT1	***************************"
      print "launch --rwgt_name=FT1_"+test
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 12 " +str((i*0.5)) + "00000e-12"          
      print ""
      print ""
@@ -153,5 +153,5 @@ for i in range(-41,42):
      print ""
      print "#************	FT2	***************************"
      print "launch --rwgt_name=FT2_"+test
-     print "        set anoinputs 12 0.000000e+00"
+     print "        set anoinputs 11 0.000000e+00"
      print "        set anoinputs 13 " +str((i*0.5)) + "00000e-12"
